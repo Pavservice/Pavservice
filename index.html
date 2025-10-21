@@ -1,126 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>PAV Auto Service Уральск</title>
-<meta name="description" content="PAV Auto Service — ремонт АКПП, вариаторов и DSG в Уральске."/>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-:root{--gold:#D4AF37;--bg:#0b0b0b;--muted:#bfbfbf}
-body{background:var(--bg);color:#fff;font-family:Inter,system-ui,Arial,sans-serif;margin:0}
-.container{max-width:980px;margin:0 auto;padding:20px}
-.header{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
-.logo-img{height:56px}
-.btn{background:linear-gradient(90deg,var(--gold),#b38b2b);color:#000;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700}
-.card{background:#0f0f0f;border:1px solid rgba(255,255,255,0.04);padding:12px;border-radius:10px}
-.small{color:var(--muted);font-size:0.95rem}
-.lang{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--gold);padding:6px 8px;border-radius:6px;margin-left:6px}
-.section{margin-top:24px}
-h1{font-size:28px;margin:0 0 8px 0}
-h2{color:var(--gold);margin:0 0 8px 0}
-.footer{padding:20px 0;color:var(--muted);text-align:center}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PAV Auto Service — Уральск</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #f5d76e;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    header {
+      margin-top: 40px;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.2em;
+    }
+    p {
+      margin: 0.3em 0;
+      font-size: 1.1em;
+    }
+    iframe {
+      margin-top: 20px;
+      width: 90%;
+      max-width: 600px;
+      height: 350px;
+      border: 0;
+      border-radius: 10px;
+    }
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-  <header class="header">
-    <div style="display:flex;align-items:center;gap:12px">
-      <img src="logo.svg" class="logo-img" alt="logo"/>
-      <div>
-        <div style="font-weight:800">PAV Auto Service Уральск</div>
-        <div class="small">Уральск, ул. Шолохова 13В</div>
-      </div>
-    </div>
-    <div>
-      <button class="lang" onclick="setLang('ru')">RU</button>
-      <button class="lang" onclick="setLang('kz')">KZ</button>
-      <a href="tel:+7 702 920 2663" class="btn" style="margin-left:12px">+7 702 920 2663</a>
-    </div>
+  <header>
+    <h1>PAV Auto Service</h1>
+    <p>г. Уральск, ул. Шолохова 13В</p>
+    <p>📞 +7 702 920 2663</p>
   </header>
 
-  <main>
-    <section class="section" id="home">
-      <h1 id="t-title">Профессиональный ремонт АКПП в Уральске</h1>
-      <p id="t-desc" class="small">Мы специализируемся на ремонте автоматических коробок передач, вариаторов и роботизированных DSG — быстро, качественно и с гарантией.</p>
-    </section>
+  <iframe
+    src="https://www.google.com/maps?q=51.248230,51.402247&z=17&output=embed"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
 
-    <section class="section" id="services">
-      <h2>Услуги / Қызметтер</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
-        <div class="card"><strong>Ремонт АКПП</strong><p class="small">Диагностика, ремонт и восстановление автоматических коробок передач.</p></div>
-        <div class="card"><strong>Ремонт вариаторов</strong><p class="small">CVT — диагностика, замена ремней/цепей, ремонт узлов.</p></div>
-        <div class="card"><strong>DSG / Роботы</strong><p class="small">Ремонт мехатроников, замена сцеплений и адаптация.</p></div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <h2 id="t-about">О нас / Біз туралы</h2>
-      <p id="t-about-text" class="small">PAV Service — команда опытных специалистов по трансмиссиям. Гарантия до 12 месяцев.</p>
-    </section>
-
-    <section class="section" id="booking">
-      <h2 id="t-book">Записаться / Тіркелу</h2>
-      <form onsubmit="handleBooking(event)" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
-        <input name="name" placeholder="Имя / Аты" required class="card"/>
-        <input name="phone" placeholder="Телефон / Телефон" required class="card" value="+7 702 920 2663"/>
-        <select name="service" class="card"><option>Ремонт АКПП</option><option>Ремонт вариатора</option><option>Ремонт DSG</option></select>
-        <input type="date" name="date" class="card"/>
-        <textarea name="comment" placeholder="Комментарий (по желанию)" class="card" style="min-height:80px"></textarea>
-        <button class="btn" type="submit" style="grid-column:1/-1">Отправить</button>
-      </form>
-      <div id="bookingResult" class="small" style="margin-top:8px"></div>
-    </section>
-
-    <section class="section" id="contacts">
-      <h2>Контакты / Байланыс</h2>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-        <div class="card small">
-          <p>📍 Уральск, ул. Шолохова 13В</p>
-          <p>📞 <a href="tel:+7 702 920 2663">+7 702 920 2663</a></p>
-        </div>
-        <div class="card">
-          <iframe src="https://www.google.com/maps?q=%D0%A3%D1%80%D0%B0%D0%BB%D1%8C%D1%81%D0%BA%2C+%D1%83%D0%BB.+%D0%A8%D0%BE%D0%BB%D0%BE%D1%85%D0%BE%D0%B2%D0%B0+13%D0%92&output=embed" width="100%" height="220" style="border:0;border-radius:8px"></iframe>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="reviews">
-      <h2>Отзывы / Пікірлер</h2>
-      <div style="display:grid;gap:8px">
-        <div class="card small"><strong>Азамат</strong><p>Отлично починили коробку, рекомендую.</p></div>
-        <div class="card small"><strong>Гульнар</strong><p>Делают качественно и быстро.</p></div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">© PAV Auto Service Уральск — +7 702 920 2663</footer>
-</div>
-
-<script>
-function handleBooking(e){
-  e.preventDefault();
-  var f=e.target;
-  var name=f.name.value||'Клиент';
-  var phone=f.phone.value||'';
-  document.getElementById('bookingResult').textContent = 'Спасибо, ' + name + '! Мы свяжемся по ' + phone + ' для подтверждения.';
-  f.reset();
-}
-function setLang(lang){
-  if(lang==='kz'){
-    document.getElementById('t-title').textContent='Уральскіде АКПП жөндеуін кәсіби түрде';
-    document.getElementById('t-desc').textContent='PAV Service — трансмиссияларды жөндеуде маманданған: диагностикадан бастап толық жөндеуге дейін.';
-    document.getElementById('t-about').textContent='Біз туралы / О нас';
-    document.getElementById('t-about-text').textContent='PAV Service — трансмиссия жөндеуші мамандар командасы. 12 ай кепілдік.';
-    document.getElementById('t-book').textContent='Тіркелу / Записаться';
-  } else {
-    document.getElementById('t-title').textContent='Профессиональный ремонт АКПП в Уральске';
-    document.getElementById('t-desc').textContent='Мы специализируемся на ремонте автоматических коробок передач, вариаторов и роботизированных DSG — быстро, качественно и с гарантией.';
-    document.getElementById('t-about').textContent='О нас / Біз туралы';
-    document.getElementById('t-about-text').textContent='PAV Service — команда опытных специалистов по трансмиссиям. Гарантия до 12 месяцев.';
-    document.getElementById('t-book').textContent='Записаться / Тіркелу';
-  }
-}
-</script>
+  <footer>© 2025 PAV Auto Service</footer>
 </body>
 </html>
