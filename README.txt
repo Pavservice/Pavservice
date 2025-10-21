@@ -1,0 +1,1 @@
+PAV Auto Service Уральск — готовый сайт для GitHub Pages. Загрузите index.html и logo.svg в репозиторий pavservice.github.io и включите Pages (main / root).
